@@ -8,6 +8,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script type="text/javascript"
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4RfaYlHIj7Ers6mE0mUamZt8rU6xdvGI">
@@ -40,23 +41,43 @@
 
           <p class="grey-text text-lighten-4">To get Started, select your suburb below:</p>
 
-          <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn modal-trigger button-colour" href="#modal1">Select Suburb</a>
+          <div class="valign-wrapper">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger button-colour valign" href="#modal1">Select Suburb</a>
 
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal bottom-sheet">
-            <div class="modal-content">
-              <h4>Select a Suburb</h4>
-              <ul id="suburb-selector">
-                <li><a href="#">Newmarket</a></li>
-                <li><a href="#">Ponsonby</a></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Sample Text</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal bottom-sheet">
+              <div class="modal-content">
+                <h4>Select a Suburb</h4>
+                <ul id="suburb-selector">
+                  <li><a href="#">Newmarket</a></li>
+                  <li><a href="#">Ponsonby</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Sample Text</a>
+              </div>
             </div>
           </div>
+
         </div>
+        <table>
+          <thead>
+          <tr>
+            <th data-field="id">Sales in last 3 months</th>
+            <th data-field="name">Median Sales Price</th>
+            <th data-field="price">Percent sale value above or below CV</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td id="num_sales"></td>
+            <td id="cv_price"></td>
+            <td id="cv_difference"></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="footer-copyright">
