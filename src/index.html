@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>HouseIt?</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4RfaYlHIj7Ers6mE0mUamZt8rU6xdvGI">
+  </script>
+  <script src="assets/javascript/suburbPrices.js"></script>
+  <script src="assets/javascript/GoogleMaps.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="assets/javascript/materialize.js"></script>
+  <script src="assets/javascript/init.js"></script>
+  <script src="assets/javascript/TradeMeAPI.js"></script>
+
+</head>
+<body class="" onload="initialize()">
+<nav class="orange lighten-1" role="navigation">
+  <div class="nav-wrapper container"><img src="assets/images/logo.png" id="houseIt-logo" href="#" class="brand-logo"/>
+    <img id="trademe-img" src="assets/images/trade-me-property.png">
+  </div>
+</nav>
+
+<div class="s12">
+  <div id="map-canvas"></div>
+</div>
+
+<div>
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Welcome to HouseIt - The Property Speculator's Dream</h5>
+
+          <p class="grey-text text-lighten-4">To get Started, select your suburb below:</p>
+
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn modal-trigger button-colour" href="#modal1">Select Suburb</a>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+              <h4>Select a Suburb</h4>
+              <ul id="suburb-selector">
+                <li><a href="#">Newmarket</a></li>
+                <li><a href="#">Ponsonby</a></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Sample Text</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3">Alex</a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+  $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+    }
+  );
+</script>
+
+
+</body>
+</html>
