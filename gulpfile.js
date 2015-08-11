@@ -110,18 +110,6 @@ gulp.task("html", ["styles"], function () {
     .pipe($.size({title: "optimizations"}));
 });
 
-
-// Task to upload your site to your personal GH Pages repo
-gulp.task("deploy", function () {
-  // Deploys your optimized site, you can change the settings in the html task if you want to
-  return gulp.src("./site/**/*")
-    .pipe($.ghPages({
-      // Currently only personal GitHub Pages are supported so it will upload to the master
-      // branch and automatically overwrite anything that is in the directory
-      branch: "master"
-      }));
-});
-
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
   gulp.src("./serve/assets/javascript/*.js")
