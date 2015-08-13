@@ -19,6 +19,7 @@
   <script src="assets/javascript/materialize.js"></script>
   <script src="assets/javascript/init.js"></script>
   <script src="assets/javascript/TradeMeAPI.js"></script>
+  <script src="assets/javascript/papaparse.min.js"></script>
 
 </head>
 <body class="" onload="initialize()">
@@ -95,6 +96,14 @@
       out_duration: 200, // Transition out duration
     }
   );
+
+  //parse the data file
+  var csvfile = "assets/Auckland.csv";
+
+  $.get(csvfile, function (data) {
+    var csvdata = Papa.parse(data);
+    console.log(csvdata);
+  });
 </script>
 
 
