@@ -19,6 +19,7 @@
   <script src="assets/javascript/materialize.js"></script>
   <script src="assets/javascript/init.js"></script>
   <script src="assets/javascript/TradeMeAPI.js"></script>
+  <script src="assets/javascript/csv2json.js"></script>
   <script src="assets/javascript/papaparse.min.js"></script>
 
 </head>
@@ -44,15 +45,13 @@
 
           <div class="valign-wrapper">
             <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn modal-trigger button-colour valign" href="#modal1">Select Suburb</a>
+            <a class="waves-effect waves-light btn modal-trigger button-colour valign" href="#modal1"  onclick="getSuburbs()">Select Suburb</a>
 
             <!-- Modal Structure -->
             <div id="modal1" class="modal bottom-sheet">
               <div class="modal-content">
                 <h4>Select a Suburb</h4>
                 <ul id="suburb-selector">
-                  <li><a href="#">Newmarket</a></li>
-                  <li><a href="#">Ponsonby</a></li>
                 </ul>
               </div>
               <div class="modal-footer">
@@ -93,17 +92,9 @@
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
       in_duration: 300, // Transition in duration
-      out_duration: 200, // Transition out duration
+      out_duration: 200 // Transition out duration
     }
   );
-
-  //parse the data file
-  var csvfile = "assets/Auckland.csv";
-
-  $.get(csvfile, function (data) {
-    var csvdata = Papa.parse(data);
-    console.log(csvdata);
-  });
 </script>
 
 

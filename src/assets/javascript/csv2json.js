@@ -1,5 +1,5 @@
 //Generates a list of suburbs from a given .csv file
-//TODO: Sort this by region so that there's not lots of suburbs on screen and give each suburb an individual ID (maybe from TradeMe suburb ID?)
+//TODO: Sort this by region so that there's not lots of suburbs on screen and give each suburb an individual ID (maybe from TradeMe?)
 function getSuburbs(){
   //parse the data file
   var csvfile = "assets/Auckland.csv";
@@ -12,5 +12,4 @@ function getSuburbs(){
     $("#suburb-selector").append(listedSuburbs);
   });
 }
-
 
