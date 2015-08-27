@@ -1,16 +1,16 @@
-
-//Suburb data is calculated on residential property sales from the previous 3 months
-function createSuburbObject(data) {
-
-  //TODO: Build a JSON model of .csv file and store details into JSON objects
-  var i;
-  while(i < data.length ){
-      this.numberOfSales = num_sales;
-      this.median_price = median_price;
-      this.cv_difference = cv_difference;
-      this.trademe_suburb_id = trademe_suburb_id;
-
+//Generates a list of suburbs from a given .csv file
+//TODO: Sort this by region so that there's not lots of suburbs on screen and give each suburb an individual ID (maybe from TradeMe?)
+function getSuburbs(){
+  //parse the data file
+  var csvfile = "assets/Auckland.csv";
+  $.get(csvfile, function (data) {
+    var csvdata = Papa.parse(data);
+    var listedSuburbs = "";
+    for (var i = 1; i < csvdata.data.length; i++) {
+      listedSuburbs += "<li><a href=\"#\">"+ csvdata.data[i][0] +"</a></li>";
     }
-
-  }
+    $("#suburb-selector").append(listedSuburbs);
+  });
 }
+
+
