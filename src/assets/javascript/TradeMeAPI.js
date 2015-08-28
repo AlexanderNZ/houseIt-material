@@ -18,7 +18,7 @@ $(function () {
 function get_properties(suburb_id) {
   updateSuburbInFor(suburb_id);
   var consumer_key = 'C424FED29227D362E02BA38FFAF22121';
-  var consumer_secret = 'C90B7D221696E32BC0F0E2E3B868A437';
+  var consumer_secret = 'C90B7D221696E32BC0F0E2E3B868A437&26';
 
   var query_string = "suburb=" + suburb_id;
 

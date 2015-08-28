@@ -26,9 +26,9 @@ function updateSuburbInFor(suburb_id) {
   var result = $.grep(suburb_data, function (e) {
     return e.trademe_suburb_id == suburb_id;
   })[0];
-  $("#num_sales").append("<li>" + result.num_sales + "</li>");
-  $("#cv_price").append("<li>" + result.median_price + "</li>");
-  $("#cv_difference").append("<li>" + result.cv_difference + "</li>");
+  $("#num_sales").append("<p>" + result.num_sales + "</p>");
+  $("#cv_price").append("<p>" + result.median_price + "</p>");
+  $("#cv_difference").append("<p>" + result.cv_difference + "</p>");
 };
 
 function eraseAll() {
@@ -36,3 +36,4 @@ function eraseAll() {
   $("#cv_price").empty();
   $("#cv_difference").empty();
 }
+
